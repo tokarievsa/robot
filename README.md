@@ -1,0 +1,1 @@
+# It's a first simple robot-friend

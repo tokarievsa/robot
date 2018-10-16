@@ -1,0 +1,275 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mali;
+}
+
+.welcome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form [type='text'],
+.form [type='button'] {
+  font-size: 1em;
+  border: 1px solid #aaa;
+  box-shadow: 0px 3px 5px #aaa;
+  outline: none;
+}
+
+.form [type='text']{
+  padding: 8px 8px 8px 20px;
+  border-radius: 20px 0px 0px 20px;
+  width: 180px;
+}
+
+.form [type='button']{
+  font-weight: 600;
+  padding: 8px 20px 8px 8px;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+}
+
+.form [type='button']:hover{
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.container > h1 {
+  margin-bottom: 20px;
+}
+
+.head, .trunk,
+.left-hand, .right-hand,
+.left-leg, .right-leg {
+  background-color: rgb(71, 129, 216)
+}
+
+.head, .body-top, .body-bottom {
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  height: 150px;
+  width: 200px;
+  border-radius: 100px 100px 0  0;
+  margin-bottom: 10px;
+  transition: border-radius 1s, width 1s, background-color 1s;
+}
+
+.head:hover {
+  width: 300px;
+  border-radius: 150px 150px 0 0;
+}
+
+.left-eye, .right-eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 40px;
+  transition: transform 1s;
+}
+
+.left-eye:hover, .right-eye:hover {
+  transform: scale(1.5);
+  background-color: magenta;
+}
+
+.body-top, .body-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.trunk {
+  height: 250px;
+  width: 200px;
+  border-radius: 0 0 40px 40px;
+  transition: background-color 1s;
+}
+
+.left-hand, .right-hand {
+  width: 40px;
+  height: 150px;
+  border-radius: 20px;
+  margin: 0px 10px;
+  transition: transform 1s, background-color 1s;
+  transform-origin: 20px 20px;
+}
+
+.left-hand:hover {
+  transform: rotate(30deg);
+}
+
+.right-hand:hover {
+  transform: rotate(-30deg);
+}
+
+.left-leg, .right-leg {
+  width: 50px;
+  height: 100px;
+  border-radius: 20px;
+  margin: -20px 20px 0 20px;
+  transition: transform 0.5s, background-color 1s;
+  transform-origin: center top;
+}
+
+.left-leg:hover {
+  transform: rotate(20deg);
+}
+
+.right-leg:hover {
+  transform: rotate(-20deg);
+}
+
+.head:hover,
+.trunk:hover,
+.left-hand:hover,
+.right-hand:hover,
+.left-leg:hover,
+.right-leg:hover {
+  background-color: #aaa;
+}
+
+.trunk:hover {
+  z-index: 1;
+}
+
+#arrow {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.fa-arrow-down {
+  position: relative;
+  display: block;
+  top: 0px;
+  font-size: 3em;
+  color: rgb(255, 0, 0);
+  transition: top 0.25s, opacity 0.5s;
+}
+
+#voiceselection {
+  font-family: Mali;
+  font-weight: 600;
+  font-size: 1.0em;
+  outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .head {
+    height: 130px;
+    width: 180px;
+    border-radius: 90px 90px 0  0;
+  }
+
+  .head:hover {
+    width: 240px;
+    border-radius: 130px 130px 0 0;
+  }
+
+  .trunk {
+    height: 220px;
+    width: 180px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .left-hand, .right-hand {
+    width: 40px;
+    height: 120px;
+    border-radius: 20px;
+    transform-origin: 20px 20px;
+  }
+
+  #arrow {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+  }
+  
+  .form [type='text'],
+  .form [type='button'] {
+    font-size: 0.8em;
+  }
+
+  .form [type='text']{
+    width: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  
+  .head {
+    height: 120px;
+    width: 160px;
+    border-radius: 75px 75px 0  0;
+  }
+
+  .head:hover {
+    width: 240px;
+    border-radius: 120px 120px 0 0;
+  }
+
+  .trunk {
+    height: 200px;
+    width: 160px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .left-hand, .right-hand {
+    width: 30px;
+    height: 100px;
+    border-radius: 15px;
+    transform-origin: 15px 15px;
+  }
+
+  .left-hand:hover {
+    transform: rotate(25deg);
+  }
+
+  .right-hand:hover {
+    transform: rotate(-25deg);
+  }
+
+  .left-eye, .right-eye {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin: 30px;
+  }
+
+  .left-leg, .right-leg {
+    width: 40px;
+    height: 80px;
+    border-radius: 15px;
+  }
+
+  .fa-arrow-down {
+    font-size: 2em;
+  }
+
+}

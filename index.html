@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class='welcome'>
+      <div class='form'>
+        <input type='text' placeholder="Введите ваше имя">
+        <input type='button' value='Продолжить'>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Robot Friend</h1>
+      <div class="robot">
+        <div class="head">
+          <div class="left-eye"></div>
+          <div class="right-eye"></div>
+        </div>
+        <div class="body-top">
+          <div class="left-hand"></div>
+          <div class="trunk"></div>
+          <div class="right-hand"></div>
+        </div>
+        <div class="body-bottom">
+          <div class="left-leg"></div>
+          <div class="right-leg"></div>
+        </div>
+      </div>
+      <div id='arrow'>
+        <i class="fa fa-arrow-down"></i>
+        <select id="voiceselection"></select>
+      </div>
+      <div id='link'>
+        <p>This site uses API voice from <a href="https://responsivevoice.org" target="_blank">here</a></p>
+      </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="script.js"></script>
+  </body>
+</html>
