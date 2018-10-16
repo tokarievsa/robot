@@ -150,7 +150,7 @@ $(document).ready(() => {
         setTimeout(()=>{
           const lang = $(selectedOption).val();
           const text = [speech[1], speech[2], speech[3]].join('. ');
-          responsiveVoice.speak(text, lang, {rate: 0.8});
+          responsiveVoice.speak(text, lang, {rate: 1.0});
         }, 2000);
       }
     }
@@ -183,7 +183,7 @@ $(document).ready(() => {
     function addEventVoice(){
       for(let i=0; i < robot.length; i++){
         robot[i].on('mouseover', (event)=>{
-          responsiveVoice.speak($(robot[i]).attr('data-voice'), $(selectedOption).val(), {rate: 0.8});
+          responsiveVoice.speak($(robot[i]).attr('data-voice'), $(selectedOption).val(), {rate: 1.0});
           event.stopPropagation();
         });
         robot[i].on('mouseout', ()=>{
